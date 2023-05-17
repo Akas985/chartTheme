@@ -1,0 +1,77 @@
+{
+  "chartu": [
+    {
+      "canvasId":"0",
+      "value": 100,
+      "label": "json-server",
+      "category": "typicode",
+      "title":"title1",
+      "group":"grouupname1"
+    },
+    {
+      "canvasId":"1",
+      "value": 10088,
+      "label": "json-server2",
+      "category": "typicode2",
+      "title":"title2",
+      "group":"grouupname2"
+    }
+  ],
+
+ 
+  "charts" : [
+    {
+      "title" : "Sales Statistics",
+      "chartType" : "doughnut",
+      "colSpan" : 4,
+      "canvasId":"0",
+      "ccdata" : [
+        {
+          "ACNAME": "PREESA TRADE AND SUPPLIERS1",
+          "STOCK": 2190.000,
+          "label":"label1"
+        },
+        {
+          "ACNAME": "LUNIVA TRADING HOUSE1",
+          "STOCK": 1230.000,
+          "label":"label2"
+          
+        },
+        {
+          "ACNAME": "BB TRADING PVT.LTD1",
+          "STOCK": 1210.000,
+          "label":"label3"
+        }
+      ]
+    },
+    {
+      "title" : "Purchase Statistics",
+      "chartType" : "bar",
+      "colSpan" : 4,
+      "canvasId":"1",
+      "ccdata" : [
+        {
+          "ACNAME": "PREESA TRADE AND SUPPLIERS2",
+          "STOCK": 2195.000,
+          "category" : "Actual"
+        },
+        {
+          "ACNAME": " TRADE AND SUPPLIERS2",
+          "STOCK": 219.000,
+          "category" : "Actual"
+        }
+       
+      ]
+    }
+  ]
+
+
+  
+  
+  
+}
+
+
+
+
+

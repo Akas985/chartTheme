@@ -1,0 +1,49 @@
+
+
+<div class="home_content">
+  <div class="dashboardContents">
+
+    <div class="row mainDashboardFirstWrapper" style="margin: 0;">
+      <ng-container  >
+        <ng-container *ngFor="let data of dataforloop; let i = index ">
+         
+          <!-- <div [ngClass]="this.declerationService.ColSpanValue[i]? 'col-lg-{{this.declerationService.ColSpanValue[i]}}' : 'col-lg-{{data.colSpan}}'"> -->
+            <!-- <p>{{ this.declerationService.ColSpanValue[i]}}</p> -->
+            <div  *ngIf="this.declerationService.ColSpanValue[i]" class="col-lg-{{this.declerationService.ColSpanValue[i]}}">
+            <div class="bar-chart-container ">
+              <div class="chartsheading">
+                <div class="left">
+                  <h5 >{{data.title}}  </h5>
+                  <!-- <h5>{{data.colSpan}}</h5> -->
+                <!-- <input type="text"  (change)="ChooseColSpan($event)" [(ngModel)]="data.colSpan"> -->
+                </div>
+          
+              </div>
+  
+              <ims-charts  [colSpan]="data.colSpan" [index]="i" [ChartType]="data.chartType" [chartData]="this.declerationService.Dataforchart[data.canvasId]" [canvasId]="data.canvasId" [options]="option1" style="width: 100%"></ims-charts>
+
+            </div>
+          </div>
+          <div  *ngIf="!this.declerationService.ColSpanValue[i]"class="col-lg-{{data.colSpan}}">
+            <div class="bar-chart-container ">
+              <div class="chartsheading">
+
+               
+                <div class="left">
+                  <h5 >{{data.title}}  </h5>
+                  <!-- <h5>{{data.colSpan}}</h5> -->
+                <!-- <input type="text"  (change)="ChooseColSpan($event)" [(ngModel)]="data.colSpan"> -->
+                </div>
+          
+              </div>
+  
+              <ims-charts   [index]="i" [ChartType]="data.chartType" [chartData]="this.declerationService.Dataforchart[data.canvasId]" [canvasId]="data.canvasId" [options]="option1" style="width: 100%"></ims-charts>
+
+            </div>
+          </div>
+        </ng-container>
+      </ng-container>
+    </div>
+
+  </div>
+</div>
